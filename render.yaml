@@ -1,0 +1,13 @@
+services:
+  - type: web
+    plan: free
+    name: Rajan
+    env: python
+    buildCommand: pip3 install -U -r requirements.txt
+    startCommand: python3 update.py && python3 -m bot
+    repo: https://github.com/rajanvibes/wzml-render      
+    branch: render
+    envVars:
+      - key: CONFIG_FILE_URL 
+        sync: false
+    autoDeploy: false
